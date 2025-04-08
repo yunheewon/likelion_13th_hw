@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="contents">2025 멋쟁이사자처럼 13기</h1>
+<div class="contents">BE_윤희원</div>
+
+<div class="main-summary">
+    <div>2주차 정리</div>
+    <ul>
+        <li>HTML 페이지
+            <ul>
+                <li>[main]에 Templates 폴더 생성 : 파일의 구조나 레이아웃을 한 번에 관리</li>
+                <li>main > templates > main 폴더 내에 mainpage.html 파일 생성</li>
+                <li>Views.py 작성 → HTML 페이지와 view 작성</li>
+                <li>urls.py 작성: url에 해당 데이터 연결</li>
+                <li>페이지간의 이동을 위해 HTML 링크 연결이 필요 → 각 html파일에 &#123;% url 'name' %&#125; 작성 </li>
+            </ul>
+        </li>
+
+        <li>template 언어
+            <ul>
+                <li>템플릿 변수</li>
+                <li>템플릿 태그 -> 반복문/조건문</li>
+                <li>템플릿 필터 -> 템플릿 변수를 특정 서식에 따라 변환</li>
+                <li>템플릿 주석 -> #을 이용</li>
+            </ul>    
+        </li>
+    </ul>
+</div>
+
+{% endblock %}
