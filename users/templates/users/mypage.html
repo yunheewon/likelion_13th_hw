@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>마이페이지에 오신 것을 환영합니다</h1>
+
+<h3>{{user.profile.nickname}}님 안녕하세요</h3>
+<h3>당신의 학과는 {{user.profile.major}}입니다</h3>
+<h3>당신의 나이는 {{user.profile.age}}입니다</h3>
+<h3>당신의 MBTI는 {{user.profile.mbti}}입니다</h3>
+
+<hr>
+
+
+<h2>{{ user.username }}님이 작성한 글 목록</h2>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="{% url 'main:detail' post.id %}">{{ post.title }}</a>
+    </li>
+    {% empty %}
+        <li>작성한 글이 아직 없습니다.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
