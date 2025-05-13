@@ -7,9 +7,10 @@ from django.contrib.auth.decorators import login_required
 
 def mypage(request, id):
     user=get_object_or_404(User, pk=id)
-    user_posts = Post.objects.filter(writer=user.username)
+    user_posts = Post.objects.filter(author=user)
     context = {
         'user':user,
         'posts': user_posts
     }
     return render(request,'users/mypage.html', context)
+

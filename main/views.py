@@ -23,6 +23,7 @@ def create(request):
 
     new_post.title = request.POST['title']
     new_post.writer = request.POST['writer']
+    new_post.author = request.user
     new_post.weather = request.POST['weather']
     new_post.content = request.POST['content']
     new_post.pub_date = timezone.now()

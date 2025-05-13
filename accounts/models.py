@@ -8,4 +8,3 @@ class Profile(models.Model):
     major = models.TextField(null=True, max_length=30)
     mbti = models.CharField(null=True,max_length=4)
     age = models.IntegerField(null=True)
-    
