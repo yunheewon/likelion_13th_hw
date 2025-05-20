@@ -1,8 +1,9 @@
 <nav class="navbar-container">
     <a class="navbar-link" href="{% url 'main:mainpage' %}">likelion_2주차</a>
     <a class="navbar-link" href="{% url 'main:secondpage' %}">클릭해보세요</a>
+    <a class="navbar-link" href="{% url 'main:tag-list' %}">Tag</a>
 
-<!--사용자인증정보-->
+    <!--사용자인증정보-->
 <div class="nav-right">
     {% if user.is_authenticated %}
     <!--로그인시보이는화면-->

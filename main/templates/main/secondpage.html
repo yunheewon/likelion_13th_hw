@@ -9,6 +9,11 @@
 <div class="contents"></div>
 
 <div>
+    <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'main:new-post' %}">새 글 작성하기</a>
+        {% endif %}
+    </div>
     {% for post in posts %}
     <div>
         <hr/>
